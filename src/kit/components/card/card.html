@@ -1,17 +1,21 @@
 <div class="card" [class.card--active]="isActive" (click)="onActivate()">
   <div class="card__icon">
-    <mat-icon svgIcon="tech-21"></mat-icon>
+    <mat-icon svgIcon="tech-5"></mat-icon>
   </div>
 
   <div class="card__content">
     <div class="card__row">
-      <span class="c-dark">
+      <span class="c-dark max-row">
         Грузовик <span class="fw-b">Р100ТТ 799</span>
       </span>
 
       <div class="card__spacer"></div>
 
       <div class="card__actions">
+        <button mat-icon-button class="card-action" (click)="$event.stopPropagation()">
+          <mat-icon svgIcon="file"></mat-icon>
+        </button>
+
         <button mat-icon-button class="card-action" (click)="$event.stopPropagation()">
           <mat-icon svgIcon="edit"></mat-icon>
         </button>
@@ -31,14 +35,33 @@
     </div>
 
     <div class="card__row">
-      <span class="c-gray">Scania TT280</span>
+      <span class="c-gray max-row">Scania TT280</span>
     </div>
 
-    <div class="card__row cp-h-b" matRipple [matRippleDisabled]="false" (click)="$event.stopPropagation()">
-      <span style="display:flex; align-items: center">
+    <div class="card__row">
+      <span class="max-row">Год выпуска: 2018</span>
+      <span class="max-row">№ 890</span>
+    </div>
+
+    <div class="card__row" (click)="$event.stopPropagation()">
+      <span class="cp-h-b" matRipple [matRippleDisabled]="false" style="display:flex; align-items: center">
         <mat-icon svgIcon="info" class="icon-size" style="padding-right: 0.5rem"></mat-icon>
-        Подробно о технике
+        <span class="max-row">Подробно о технике</span>
       </span>
+
+      <div class="card__spacer"></div>
+
+      <div style="display: flex; align-items: center; gap: 1rem">
+        <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--def-blue-color)">
+          <mat-icon svgIcon="unit-5" style="width: 1rem; height: 1rem; margin-top: -2px"></mat-icon>
+          <span class="max-row">2 узла</span>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--def-blue-color)">
+          <mat-icon svgIcon="sample-4" style="width: 1rem; height: 1rem; margin-top: -2px"></mat-icon>
+          <span class="max-row">6 проб</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>

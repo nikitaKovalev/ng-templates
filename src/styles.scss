@@ -16,6 +16,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --def-blue-white-color: #CCE7FF;
 }
 
+@mixin max-row($max) {
+  display: -webkit-box;
+  -webkit-line-clamp: $max;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @mixin icon-size($size) {
   &.mat-icon {
     width: $size;
@@ -74,6 +81,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 }
 
+.max-row {
+  @include max-row(1);
+
+  &--2 {
+    @include max-row(2);
+  }
+}
+
 .card-action {
   --wrapper-size: calc(var(--def-size) + 0.5rem);
   --border-radius: 0.25rem;
@@ -116,5 +131,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   &.mdc-icon-button {
     font-size: var(--def-size);
+  }
+
+  &:hover {
+    & .mat-icon {
+      color: var(--def-blue-color);
+    }
   }
 }

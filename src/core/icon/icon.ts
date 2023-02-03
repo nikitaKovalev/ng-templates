@@ -6,22 +6,6 @@ export const ICONS = [
   'tech-4',
   'tech-5',
   'tech-6',
-  'tech-7',
-  'tech-8',
-  'tech-9',
-  'tech-10',
-  'tech-11',
-  'tech-12',
-  'tech-13',
-  'tech-14',
-  'tech-15',
-  'tech-16',
-  'tech-17',
-  'tech-18',
-  'tech-19',
-  'tech-20',
-  'tech-21',
-  'tech-22',
 
   // units
   'unit-1',
@@ -34,6 +18,7 @@ export const ICONS = [
   'sample-1',
   'sample-2',
   'sample-3',
+  'sample-4',
 
   // defaults
   'def-car',
@@ -43,4 +28,6 @@ export const ICONS = [
   'info',
   'edit',
   'delete',
+  'file',
+  'cycle',
 ] as const;

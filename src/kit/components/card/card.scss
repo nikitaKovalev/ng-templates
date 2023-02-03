@@ -8,7 +8,7 @@
   @include box-shadow(transparent);
 
   display: flex;
-  padding: var(--def-size);
+  padding: calc(var(--def-size) - 0.2rem) var(--def-size);
   gap: var(--def-size);
   overflow: hidden;
   background: #ffffff;
