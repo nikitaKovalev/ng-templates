@@ -1,0 +1,20 @@
+.toolbar {
+  gap: 1rem;
+  font-size: 0.875rem;
+
+  &__item {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: cornflowerblue;
+    }
+  }
+}
+
+.content {
+  display: block;
+  max-height: calc(100% - 4rem);
+  overflow: auto;
+  padding: 1rem;
+}

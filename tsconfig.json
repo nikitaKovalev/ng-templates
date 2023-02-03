@@ -2,6 +2,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@kit/*": ["src/kit/*"],
+      "@kit": ["src/kit/index"],
+      "@pages": ["src/pages/index"]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
