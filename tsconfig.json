@@ -5,6 +5,8 @@
     "paths": {
       "@kit/*": ["src/kit/*"],
       "@kit": ["src/kit/index"],
+      "@core/*": ["src/core/*"],
+      "@core": ["src/core/index"],
       "@pages": ["src/pages/index"]
     },
     "baseUrl": "./",

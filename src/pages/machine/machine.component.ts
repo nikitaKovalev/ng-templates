@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Card } from '@kit';
+import { MACHINE_IMPORTS } from './machine.imports';
 
 @Component({
   standalone: true,
-  imports: [Card],
-  template: `<div style="width: 33%"><card></card></div>`,
+  imports: MACHINE_IMPORTS,
+  templateUrl: './machine.template.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MachineComponent {}

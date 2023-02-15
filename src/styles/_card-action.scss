@@ -1,0 +1,50 @@
+.card-action {
+  --wrapper-size: calc(var(--def-size) + 0.5rem);
+  --border-radius: 0.25rem;
+
+  &.mat-mdc-icon-button {
+    border-radius: var(--border-radius);
+    width: var(--wrapper-size);
+    height: var(--wrapper-size);
+    padding: var(--border-radius);
+    background: var(--def-blue-light);
+
+    & .mat-mdc-button-touch-target {
+      width: var(--wrapper-size);
+      height: var(--wrapper-size);
+    }
+
+    & .mat-mdc-button-persistent-ripple {
+      border-radius: var(--border-radius);
+
+      &::before {
+        background-color: var(--def-blue-color);
+      }
+    }
+
+    & svg {
+      width: var(--def-size);
+      height: var(--def-size);
+    }
+  }
+
+  & .mat-icon.material-icons {
+    font-size: var(--def-size);
+  }
+
+  & .mat-icon {
+    width: var(--def-size);
+    height: var(--def-size);
+    color: var(--def-gray-color);
+  }
+
+  &.mdc-icon-button {
+    font-size: var(--def-size);
+  }
+
+  &:hover {
+    & .mat-icon {
+      color: var(--def-blue-color);
+    }
+  }
+}

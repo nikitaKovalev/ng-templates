@@ -1,0 +1,43 @@
+<div style="width: 33%">
+  <card>
+    <card-row *crRef>
+      <div cardRowPrefix rowsLimit="1" color="dark">
+        Грузовик <span class="fw-b">Р100ТТ 799</span>
+      </div>
+
+      <span cardRowPrefix rowsLimit="1" color="gray">
+        2000 км
+      </span>
+
+      <card-row-actions cardRowSuffix canDelete canEdit></card-row-actions>
+    </card-row>
+
+    <card-row *crRef>
+      <span cardRowPrefix rowsLimit="1" color="gray">Scania TT280</span>
+    </card-row>
+
+    <card-row *crRef>
+      <span cardRowPrefix rowsLimit="1">Год выпуска: 2018</span>
+      <span cardRowPrefix rowsLimit="1">№ 890</span>
+    </card-row>
+
+    <card-row *crRef>
+      <div cardRowPrefix class="cp-h-b d-flex align-center" matRipple (click)="$event.stopPropagation()">
+        <mat-icon svgIcon="info" class="icon-size" style="padding-right: 0.5rem"></mat-icon>
+        <span class="max-row">Подробно о технике</span>
+      </div>
+
+      <div cardRowSuffix color="blue" class="d-flex align-center gap--3">
+        <div class="d-flex align-center gap--2">
+          <mat-icon svgIcon="unit-5" class="icon-size"></mat-icon>
+          <span class="max-row">2 узла</span>
+        </div>
+
+        <div class="d-flex align-center gap--2">
+          <mat-icon svgIcon="sample-4" class="icon-size"></mat-icon>
+          <span class="max-row">6 проб</span>
+        </div>
+      </div>
+    </card-row>
+  </card>
+</div>
