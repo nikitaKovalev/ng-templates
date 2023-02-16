@@ -1,6 +1,6 @@
 import { Directive, InjectionToken } from '@angular/core';
-import { CARD_INTERACTIVE_HOST } from '@kit/components/card/row/card-interactive.host';
-import { CardInteractiveBase } from '@kit/components/card/row/card-interactive.base';
+import { CARD_INTERACTIVE_HOST } from '@kit/components/card/interactive/card-interactive.host';
+import { CardInteractiveBase } from '@kit/components/card/interactive/card-interactive.base';
 
 export const CARD_ROW_PREFIX = new InjectionToken<CardRowPrefix>('CARD_ROW_PREFIX');
 

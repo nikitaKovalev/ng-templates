@@ -1,5 +1,5 @@
-<div style="width: 33%">
-  <card>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem">
+  <card icon="tech-1">
     <card-row *crRef>
       <div cardRowPrefix rowsLimit="1" color="dark">
         Грузовик <span class="fw-b">Р100ТТ 799</span>
@@ -9,7 +9,7 @@
         2000 км
       </span>
 
-      <card-row-actions cardRowSuffix canDelete canEdit></card-row-actions>
+      <card-row-actions cardRowSuffix canDelete canEdit canDownload></card-row-actions>
     </card-row>
 
     <card-row *crRef>
@@ -38,6 +38,198 @@
           <span class="max-row">6 проб</span>
         </div>
       </div>
+    </card-row>
+  </card>
+
+  <card icon="tech-2">
+    <card-row *crRef>
+      <div cardRowPrefix rowsLimit="1" color="dark">
+        Грузовик <span class="fw-b">Р100ТТ 799</span>
+      </div>
+
+      <span cardRowPrefix rowsLimit="1" color="gray">
+        2000 км
+      </span>
+
+      <card-row-actions cardRowSuffix canDelete canEdit></card-row-actions>
+    </card-row>
+
+    <card-row *crRef>
+      <span cardRowPrefix rowsLimit="1" color="gray">Scania TT280</span>
+    </card-row>
+
+    <card-row *crRef>
+      <span cardRowPrefix rowsLimit="1">Год выпуска: 2018</span>
+      <span cardRowPrefix rowsLimit="1">№ 890</span>
+
+      <div cardRowSuffix color="blue" class="d-flex align-center gap--3">
+        <div class="d-flex align-center gap--2">
+          <mat-icon svgIcon="unit-5" class="icon-size"></mat-icon>
+          <span class="max-row">2 узла</span>
+        </div>
+      </div>
+    </card-row>
+  </card>
+
+  <card icon="tech-3">
+    <card-row *crRef>
+      <div cardRowPrefix rowsLimit="1" color="dark">
+        Грузовик <span class="fw-b">Р100ТТ 799</span>
+      </div>
+
+      <span cardRowPrefix rowsLimit="1" color="gray">
+        2000 км
+      </span>
+
+      <card-row-actions cardRowSuffix canDelete canEdit></card-row-actions>
+    </card-row>
+
+    <card-row *crRef>
+      <span cardRowPrefix rowsLimit="1" color="gray">Scania TT280</span>
+    </card-row>
+  </card>
+
+  <card icon="tech-4">
+    <card-row *crRef>
+      <div cardRowPrefix rowsLimit="1" color="dark">
+        Грузовик <span class="fw-b">Р100ТТ 799</span>
+      </div>
+
+      <span cardRowPrefix rowsLimit="1" color="gray">
+        2000 км
+      </span>
+    </card-row>
+
+    <card-row *crRef>
+      <span cardRowPrefix rowsLimit="1" color="gray">Scania TT280</span>
+    </card-row>
+
+    <card-row *crRef>
+      <span cardRowPrefix rowsLimit="1">Год выпуска: 2018</span>
+      <span cardRowPrefix rowsLimit="1">№ 890</span>
+    </card-row>
+
+    <card-row *crRef>
+      <div cardRowPrefix class="cp-h-b d-flex align-center" matRipple (click)="$event.stopPropagation()">
+        <mat-icon svgIcon="info" class="icon-size" style="padding-right: 0.5rem"></mat-icon>
+        <span class="max-row">Подробно о технике</span>
+      </div>
+
+      <div cardRowSuffix color="red" rowsLimit="1">
+        Добавить узлы
+      </div>
+    </card-row>
+
+    <card-expansion-panel>
+      <ng-template expansionPanelContent>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda beatae debitis delectus dicta distinctio eligendi, eos esse ex laborum non quia quod quos repellat sit suscipit vitae! Aliquid assumenda blanditiis consequatur doloribus dolorum eius, eligendi est fugit illo iure nemo quaerat quia sapiente sit temporibus, tenetur voluptas voluptatibus voluptatum?
+      </ng-template>
+    </card-expansion-panel>
+  </card>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding-top: 1rem">
+  <card icon="unit-3">
+    <card-row *crRef>
+      <div cardRowPrefix rowsLimit="1" color="dark" bold>
+        АКПП
+      </div>
+
+      <span cardRowPrefix rowsLimit="1" color="gray">
+        200 м/ч
+      </span>
+
+      <card-row-actions cardRowSuffix canEdit></card-row-actions>
+    </card-row>
+
+    <card-row *crRef>
+      <div cardRowPrefix rowsLimit="1">
+        Камаз OEM TYR111 <span class="c-gray">№ 32148921</span>
+      </div>
+    </card-row>
+
+    <card-row *crRef>
+      <span cardRowPrefix rowsLimit="1">Объем системы смазки: 200 л</span>
+    </card-row>
+
+    <card-row *crRef>
+      <div cardRowPrefix class="cp-h-b d-flex align-center" matRipple (click)="$event.stopPropagation()">
+        <mat-icon svgIcon="info" class="icon-size" style="padding-right: 0.5rem"></mat-icon>
+        <span class="max-row">Подробно об узле</span>
+      </div>
+
+      <div cardRowSuffix color="red" rowsLimit="1">
+        Добавить пробы
+      </div>
+    </card-row>
+
+    <card-expansion-panel>
+      <ng-template expansionPanelContent>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda beatae debitis delectus dicta distinctio eligendi, eos esse ex laborum non quia quod quos repellat sit suscipit vitae! Aliquid assumenda blanditiis consequatur doloribus dolorum eius, eligendi est fugit illo iure nemo quaerat quia sapiente sit temporibus, tenetur voluptas voluptatibus voluptatum?
+      </ng-template>
+    </card-expansion-panel>
+  </card>
+
+  <card icon="unit-1">
+    <card-row *crRef>
+      <div cardRowPrefix rowsLimit="1" color="dark" bold>
+        АКПП
+      </div>
+
+      <span cardRowPrefix rowsLimit="1" color="gray">
+        200 м/ч
+      </span>
+
+      <card-row-actions cardRowSuffix canDelete></card-row-actions>
+    </card-row>
+
+    <card-row *crRef>
+      <div cardRowPrefix rowsLimit="1">
+        Камаз OEM TYR111 <span class="c-gray">№ 32148921</span>
+      </div>
+
+      <div cardRowSuffix color="red" rowsLimit="1">
+        <div class="d-flex align-center gap--2">
+          <mat-icon svgIcon="unit-5" class="icon-size"></mat-icon>
+          <span class="max-row">3 узла</span>
+        </div>
+      </div>
+    </card-row>
+  </card>
+
+  <card icon="unit-2">
+    <card-row *crRef>
+      <div cardRowPrefix rowsLimit="1" color="dark" bold>
+        АКПП
+      </div>
+
+      <span cardRowPrefix rowsLimit="1" color="gray">
+        200 м/ч
+      </span>
+
+      <card-row-actions cardRowSuffix canDelete></card-row-actions>
+    </card-row>
+
+    <card-row *crRef>
+      <div cardRowPrefix rowsLimit="1">
+        Камаз OEM TYR111 <span class="c-gray">№ 32148921</span>
+      </div>
+    </card-row>
+
+    <card-row *crRef>
+      <span cardRowPrefix rowsLimit="1">Объем системы смазки: 200 л</span>
+    </card-row>
+
+    <card-row *crRef>
+      <span cardRowPrefix rowsLimit="1">Lorem ipsum dolor sit amet.</span>
+    </card-row>
+
+    <card-row *crRef>
+      <span cardRowPrefix rowsLimit="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+    </card-row>
+
+    <card-row *crRef>
+      <span cardRowPrefix rowsLimit="1">Lorem ipsum dolor sit amet, consectetur</span>
     </card-row>
   </card>
 </div>

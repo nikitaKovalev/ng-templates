@@ -1,9 +1,14 @@
 <div class="card" [class.card--active]="isActive" (click)="onActivate()">
+  <!-- Icon -->
   <div class="card__icon">
-    <mat-icon svgIcon="tech-5"></mat-icon>
+    <mat-icon [svgIcon]="icon"></mat-icon>
   </div>
 
   <div class="card__content">
+    <!-- Rows -->
     <ng-container *ngFor="let row of rows" [ngTemplateOutlet]="row"></ng-container>
+
+    <!-- Expansion panel -->
+    <ng-content select="card-expansion-panel"></ng-content>
   </div>
 </div>

@@ -12,6 +12,9 @@ import { CARD_ROW, CardRowDirective } from '@kit/components/card/row/card-row.di
 })
 export class Card {
   @Input()
+  icon = 'tech-1'
+
+  @Input()
   isActive = false;
 
   @ContentChildren(CARD_ROW)

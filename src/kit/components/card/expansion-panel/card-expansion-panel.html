@@ -1,0 +1,14 @@
+<div class="expansion-panel" (click)="$event.stopPropagation(); onExpand()">
+  <label class="expansion-panel__label" matRipple>
+    <mat-icon
+      class="expansion-panel__icon"
+      [class.expansion-panel__icon--active]="isExpanded"
+      svgIcon="arrow-down"
+    ></mat-icon>
+    {{ label }}
+  </label>
+
+  <div class="expansion-panel__content" *ngIf="isExpanded" @expand>
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </div>
+</div>

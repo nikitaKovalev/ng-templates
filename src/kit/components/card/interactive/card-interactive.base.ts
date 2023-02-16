@@ -1,6 +1,7 @@
 import { Directive, Input } from '@angular/core';
-import { CardInteractive } from '@kit/components/card/row/card-interactive.interface';
+import { CardInteractive } from '@kit/components/card/interactive/card-interactive.interface';
 import { BooleanInput, NumberInput } from '@angular/cdk/coercion';
+import { ColorPalette } from '@core';
 
 @Directive()
 export class CardInteractiveBase implements CardInteractive {
@@ -11,5 +12,5 @@ export class CardInteractiveBase implements CardInteractive {
   rowsLimit: NumberInput;
 
   @Input()
-  color: "dark" | "gray" | "def" | "blue" | "blue-white" = 'def';
+  color: ColorPalette = 'def';
 }

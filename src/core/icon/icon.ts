@@ -30,4 +30,5 @@ export const ICONS = [
   'delete',
   'file',
   'cycle',
+  'arrow-down',
 ] as const;

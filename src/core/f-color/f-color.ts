@@ -2,6 +2,8 @@ import { Directive, ElementRef, inject, InjectionToken, Input, Renderer2 } from 
 
 export const F_COLOR = new InjectionToken<FontColor>('F_COLOR');
 
+export type ColorPalette = 'dark' | 'gray' | 'def' | 'blue' | 'blue-white' | 'red';
+
 @Directive({
   standalone: true,
   selector: '[fColor]',
@@ -9,7 +11,7 @@ export const F_COLOR = new InjectionToken<FontColor>('F_COLOR');
 })
 export class FontColor {
   @Input('fColor')
-  set color(value: 'dark' | 'gray' | 'def' | 'blue' | 'blue-white') {
+  set color(value: ColorPalette) {
     this._renderer.addClass(this._nativeElement, `c-${value}`);
   }
 
