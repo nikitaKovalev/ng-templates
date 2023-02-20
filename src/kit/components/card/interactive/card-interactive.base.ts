@@ -1,7 +1,7 @@
 import { Directive, Input } from '@angular/core';
 import { CardInteractive } from '@kit/components/card/interactive/card-interactive.interface';
 import { BooleanInput, NumberInput } from '@angular/cdk/coercion';
-import { ColorPalette } from '@core';
+import { ColorPalette } from '@core/types/palette.type';
 
 @Directive()
 export class CardInteractiveBase implements CardInteractive {

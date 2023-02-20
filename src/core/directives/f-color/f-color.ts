@@ -1,8 +1,7 @@
 import { Directive, ElementRef, inject, InjectionToken, Input, Renderer2 } from '@angular/core';
+import { ColorPalette } from '@core/types/palette.type';
 
 export const F_COLOR = new InjectionToken<FontColor>('F_COLOR');
-
-export type ColorPalette = 'dark' | 'gray' | 'def' | 'blue' | 'blue-white' | 'red';
 
 @Directive({
   standalone: true,

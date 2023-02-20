@@ -1,0 +1,5 @@
+:host {
+  display: flex;
+  gap: calc(var(--def-size) / 2);
+  align-items: center;
+}

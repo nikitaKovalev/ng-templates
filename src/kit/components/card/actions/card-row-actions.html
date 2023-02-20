@@ -1,0 +1,13 @@
+<ng-content select="[cardPrefix]"></ng-content>
+<button *ngIf="canDownload" mat-icon-button class="card-action" (click)="$event.stopPropagation()">
+  <mat-icon svgIcon="file"></mat-icon>
+</button>
+
+<button *ngIf="canEdit" mat-icon-button class="card-action" (click)="$event.stopPropagation()">
+  <mat-icon svgIcon="edit"></mat-icon>
+</button>
+
+<button *ngIf="canDelete" mat-icon-button class="card-action" (click)="$event.stopPropagation()">
+  <mat-icon svgIcon="delete"></mat-icon>
+</button>
+<ng-content select="[cardSuffix]"></ng-content>

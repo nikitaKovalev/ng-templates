@@ -1,6 +1,6 @@
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem">
-  <card icon="tech-1">
-    <card-row *crRef>
+  <card icon="tech-1" iconColor="blue">
+    <card-row>
       <div cardRowPrefix rowsLimit="1" color="dark">
         Грузовик <span class="fw-b">Р100ТТ 799</span>
       </div>
@@ -12,16 +12,16 @@
       <card-row-actions cardRowSuffix canDelete canEdit canDownload></card-row-actions>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <span cardRowPrefix rowsLimit="1" color="gray">Scania TT280</span>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <span cardRowPrefix rowsLimit="1">Год выпуска: 2018</span>
       <span cardRowPrefix rowsLimit="1">№ 890</span>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <div cardRowPrefix class="cp-h-b d-flex align-center" matRipple (click)="$event.stopPropagation()">
         <mat-icon svgIcon="info" class="icon-size" style="padding-right: 0.5rem"></mat-icon>
         <span class="max-row">Подробно о технике</span>
@@ -41,8 +41,8 @@
     </card-row>
   </card>
 
-  <card icon="tech-2">
-    <card-row *crRef>
+  <card icon="tech-2" iconColor="red">
+    <card-row>
       <div cardRowPrefix rowsLimit="1" color="dark">
         Грузовик <span class="fw-b">Р100ТТ 799</span>
       </div>
@@ -54,11 +54,11 @@
       <card-row-actions cardRowSuffix canDelete canEdit></card-row-actions>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <span cardRowPrefix rowsLimit="1" color="gray">Scania TT280</span>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <span cardRowPrefix rowsLimit="1">Год выпуска: 2018</span>
       <span cardRowPrefix rowsLimit="1">№ 890</span>
 
@@ -71,8 +71,8 @@
     </card-row>
   </card>
 
-  <card icon="tech-3">
-    <card-row *crRef>
+  <card icon="tech-3" iconColor="gray">
+    <card-row>
       <div cardRowPrefix rowsLimit="1" color="dark">
         Грузовик <span class="fw-b">Р100ТТ 799</span>
       </div>
@@ -80,17 +80,15 @@
       <span cardRowPrefix rowsLimit="1" color="gray">
         2000 км
       </span>
-
-      <card-row-actions cardRowSuffix canDelete canEdit></card-row-actions>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <span cardRowPrefix rowsLimit="1" color="gray">Scania TT280</span>
     </card-row>
   </card>
 
-  <card icon="tech-4">
-    <card-row *crRef>
+  <card icon="tech-4" iconColor="dark">
+    <card-row>
       <div cardRowPrefix rowsLimit="1" color="dark">
         Грузовик <span class="fw-b">Р100ТТ 799</span>
       </div>
@@ -100,16 +98,16 @@
       </span>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <span cardRowPrefix rowsLimit="1" color="gray">Scania TT280</span>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <span cardRowPrefix rowsLimit="1">Год выпуска: 2018</span>
       <span cardRowPrefix rowsLimit="1">№ 890</span>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <div cardRowPrefix class="cp-h-b d-flex align-center" matRipple (click)="$event.stopPropagation()">
         <mat-icon svgIcon="info" class="icon-size" style="padding-right: 0.5rem"></mat-icon>
         <span class="max-row">Подробно о технике</span>
@@ -130,7 +128,7 @@
 
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding-top: 1rem">
   <card icon="unit-3">
-    <card-row *crRef>
+    <card-row>
       <div cardRowPrefix rowsLimit="1" color="dark" bold>
         АКПП
       </div>
@@ -139,20 +137,28 @@
         200 м/ч
       </span>
 
-      <card-row-actions cardRowSuffix canEdit></card-row-actions>
+      <card-row-actions cardRowSuffix canEdit>
+        <button cardPrefix mat-icon-button class="card-action" (click)="$event.stopPropagation()">
+          <mat-icon svgIcon="arrow-down"></mat-icon>
+        </button>
+
+        <button cardSuffix mat-icon-button class="card-action" (click)="$event.stopPropagation()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </card-row-actions>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <div cardRowPrefix rowsLimit="1">
         Камаз OEM TYR111 <span class="c-gray">№ 32148921</span>
       </div>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <span cardRowPrefix rowsLimit="1">Объем системы смазки: 200 л</span>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <div cardRowPrefix class="cp-h-b d-flex align-center" matRipple (click)="$event.stopPropagation()">
         <mat-icon svgIcon="info" class="icon-size" style="padding-right: 0.5rem"></mat-icon>
         <span class="max-row">Подробно об узле</span>
@@ -171,7 +177,7 @@
   </card>
 
   <card icon="unit-1">
-    <card-row *crRef>
+    <card-row>
       <div cardRowPrefix rowsLimit="1" color="dark" bold>
         АКПП
       </div>
@@ -183,7 +189,7 @@
       <card-row-actions cardRowSuffix canDelete></card-row-actions>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <div cardRowPrefix rowsLimit="1">
         Камаз OEM TYR111 <span class="c-gray">№ 32148921</span>
       </div>
@@ -198,7 +204,7 @@
   </card>
 
   <card icon="unit-2">
-    <card-row *crRef>
+    <card-row>
       <div cardRowPrefix rowsLimit="1" color="dark" bold>
         АКПП
       </div>
@@ -210,25 +216,25 @@
       <card-row-actions cardRowSuffix canDelete></card-row-actions>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <div cardRowPrefix rowsLimit="1">
         Камаз OEM TYR111 <span class="c-gray">№ 32148921</span>
       </div>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <span cardRowPrefix rowsLimit="1">Объем системы смазки: 200 л</span>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <span cardRowPrefix rowsLimit="1">Lorem ipsum dolor sit amet.</span>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <span cardRowPrefix rowsLimit="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
     </card-row>
 
-    <card-row *crRef>
+    <card-row>
       <span cardRowPrefix rowsLimit="1">Lorem ipsum dolor sit amet, consectetur</span>
     </card-row>
   </card>

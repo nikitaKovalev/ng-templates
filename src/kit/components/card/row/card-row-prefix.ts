@@ -6,7 +6,7 @@ export const CARD_ROW_PREFIX = new InjectionToken<CardRowPrefix>('CARD_ROW_PREFI
 
 @Directive({
   standalone: true,
-  selector: '[cardRowPrefix]',
+  selector: '[cardRowPrefix], [cardPrefix]',
   hostDirectives: CARD_INTERACTIVE_HOST,
   providers: [{provide: CARD_ROW_PREFIX, useExisting: CardRowPrefix}],
 })

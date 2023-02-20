@@ -1,15 +1,14 @@
-import { ChangeDetectionStrategy, Component, ContentChild, InjectionToken, TemplateRef } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatRippleModule } from '@angular/material/core';
-import { NgIf, NgTemplateOutlet } from '@angular/common';
+import { ChangeDetectionStrategy, Component, ContentChild, InjectionToken, Input, TemplateRef } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
 import { expand } from './card-expansion-panel.animation';
 import { CARD_EXPANSION_PANEL_CONTENT } from '@kit/components/card/expansion-panel/card-expansion-panel-content';
+import { CARD_EXPANSION_PANEL_IMPORTS } from '@kit/components/card/expansion-panel/card-expansion-panel.imports';
 
 export const CARD_EXPANSION_PANEL = new InjectionToken<CardExpansionPanel>('CARD_EXPANSION_PANEL');
 
 @Component({
   standalone: true,
-  imports: [MatIconModule, MatRippleModule, NgIf, NgTemplateOutlet],
+  imports: CARD_EXPANSION_PANEL_IMPORTS,
   selector: 'card-expansion-panel',
   templateUrl: './card-expansion-panel.html',
   styleUrls: ['/card-expansion-panel.scss'],
@@ -18,7 +17,12 @@ export const CARD_EXPANSION_PANEL = new InjectionToken<CardExpansionPanel>('CARD
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardExpansionPanel {
-  label = 'Свернуть';
+  @Input()
+  labels: [string, string] = ['Свернуть', 'Подробнее'];
+
+  get label(): string {
+    return this.isExpanded ? this.labels[0] : this.labels[1];
+  }
 
   isExpanded = false;
 

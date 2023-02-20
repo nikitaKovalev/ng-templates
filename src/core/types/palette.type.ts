@@ -1,0 +1,1 @@
+export type ColorPalette = 'dark' | 'gray' | 'def' | 'blue' | 'blue-white' | 'red';

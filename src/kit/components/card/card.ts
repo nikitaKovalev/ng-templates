@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, ContentChildren, Input, QueryList, TemplateRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CARD_IMPORTS } from './card.imports';
-import { CARD_ROW, CardRowDirective } from '@kit/components/card/row/card-row.directive';
+import { ColorPalette } from '@core/types/palette.type';
+import { ICONS } from '@core';
 
 @Component({
   standalone: true,
@@ -12,15 +13,16 @@ import { CARD_ROW, CardRowDirective } from '@kit/components/card/row/card-row.di
 })
 export class Card {
   @Input()
-  icon = 'tech-1'
+  icon: typeof ICONS[number] = 'tech-1';
+
+  @Input()
+  iconColor: ColorPalette = 'def';
 
   @Input()
   isActive = false;
-
-  @ContentChildren(CARD_ROW)
-  readonly rows: QueryList<TemplateRef<CardRowDirective>> | null = null;
 
   onActivate(): void {
     this.isActive = !this.isActive;
   }
 }
+

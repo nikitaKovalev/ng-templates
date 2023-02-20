@@ -6,7 +6,7 @@ export const CARD_ROW_SUFFIX = new InjectionToken<CardRowSuffix>('CARD_ROW_SUFFI
 
 @Directive({
   standalone: true,
-  selector: '[cardRowSuffix]',
+  selector: '[cardRowSuffix], [cardSuffix]',
   hostDirectives: CARD_INTERACTIVE_HOST,
   providers: [{provide: CARD_ROW_SUFFIX, useExisting: CardRowSuffix}],
 })

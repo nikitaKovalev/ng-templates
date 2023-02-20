@@ -7,7 +7,7 @@ export const CARD_EXPANSION_PANEL_CONTENT = new InjectionToken<TemplateRef<NgTem
 
 @Directive({
   standalone: true,
-  selector: '[expansionPanelContent]',
+  selector: 'ng-template[expansionPanelContent]',
   providers: [
     {
       provide: CARD_EXPANSION_PANEL_CONTENT,

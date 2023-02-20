@@ -1,4 +1,4 @@
 export * from './icon';
-export * from './rows-limiter';
-export * from './fw-bold';
-export * from './f-color';
+export * from './directives/rows-limiter';
+export * from './directives/fw-bold';
+export * from './directives/f-color';

@@ -1,33 +1,13 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
-import { NgIf } from '@angular/common';
+import { CARD_ROW_ACTIONS_IMPORTS } from '@kit/components/card/actions/card-row-actions.imports';
 
 @Component({
   standalone: true,
-  imports: [MatButtonModule, MatIconModule, NgIf],
+  imports: CARD_ROW_ACTIONS_IMPORTS,
   selector: 'card-row-actions',
-  template: `
-    <button *ngIf="canDownload" mat-icon-button class="card-action" (click)="$event.stopPropagation()">
-      <mat-icon svgIcon="file"></mat-icon>
-    </button>
-
-    <button *ngIf="canEdit" mat-icon-button class="card-action" (click)="$event.stopPropagation()">
-      <mat-icon svgIcon="edit"></mat-icon>
-    </button>
-
-    <button *ngIf="canDelete" mat-icon-button class="card-action" (click)="$event.stopPropagation()">
-      <mat-icon svgIcon="delete"></mat-icon>
-    </button>
-  `,
-  styles: [ `
-    :host {
-      display: flex;
-      gap: calc(var(--def-size) / 2);
-      align-items: center;
-    }
-  ` ],
+  templateUrl: './card-row-actions.html',
+  styleUrls: ['./card-row-actions.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardRowActions {
