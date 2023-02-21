@@ -9,7 +9,6 @@ export const FONT_WEIGHT_BOLD = new InjectionToken<FontWeightBold>('FONT_WEIGHT_
   providers: [{provide: FONT_WEIGHT_BOLD, useExisting: FontWeightBold}],
 })
 export class FontWeightBold {
-
   @Input('fwBold')
   set bold(value: BooleanInput) {
     const isBold = coerceBooleanProperty(value);
