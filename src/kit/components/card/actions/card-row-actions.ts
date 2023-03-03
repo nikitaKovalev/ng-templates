@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 import { CARD_ROW_ACTIONS_IMPORTS } from '@kit/components/card/actions/card-row-actions.imports';
 
@@ -20,6 +20,9 @@ export class CardRowActions {
   }
   private _canDownload = false;
 
+  @Output()
+  readonly download = new EventEmitter<void>();
+
   @Input()
   get canEdit(): boolean {
     return this._canEdit;
@@ -29,6 +32,9 @@ export class CardRowActions {
   }
   private _canEdit = false;
 
+  @Output()
+  readonly edit = new EventEmitter<void>();
+
   @Input()
   get canDelete(): boolean {
     return this._canDelete;
@@ -37,4 +43,7 @@ export class CardRowActions {
     this._canDelete = coerceBooleanProperty(value);
   }
   private _canDelete = false;
+
+  @Output()
+  readonly delete = new EventEmitter<void>();
 }
